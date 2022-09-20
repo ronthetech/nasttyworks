@@ -7,29 +7,21 @@ export default function Navbar() {
 		<nav className={styles.nav}>
 			<Link href='/'>
 				<a>
-					<h3 className={styles.logo}>Nastty Works</h3>
+					<h3>Nastty Works</h3>
 				</a>
 			</Link>
 			<ul>
 				<li>
-					<Link href='/media'>
-						<a>Media</a>
-					</Link>
+					<Link href='/media'>Media</Link>
 				</li>
 				<li>
-					<Link href='/services'>
-						<a>Services</a>
-					</Link>
+					<Link href='/services'>Services</Link>
 				</li>
 				<li>
-					<Link href='/shop'>
-						<a>Shop</a>
-					</Link>
+					<Link href='/shop'>Shop</Link>
 				</li>
 				<li>
-					<Link href='/contact'>
-						<a>Contact</a>
-					</Link>
+					<Link href='/contact'>Contact</Link>
 				</li>
 			</ul>
 		</nav>

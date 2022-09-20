@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Button from "../components/Button";
 import styles from "../styles/Home.module.css";
 
 export default function Contact() {
@@ -8,7 +9,7 @@ export default function Contact() {
 			<h1 className={styles.hidden} aria-label='Nastty Works Contact Form'>
 				<Link href='/'>Nastty Works</Link> Contact Form
 			</h1>
-			<form className={styles.form}>
+			<form id='main-content' className={styles.form}>
 				<label htmlFor='name' aria-label='name'>
 					Name
 				</label>
@@ -37,12 +38,8 @@ export default function Contact() {
 				</p>
 			</div>
 
-			<Link href='/services'>
-				<button className={styles.button}>see our services</button>
-			</Link>
-			<Link href='/media'>
-				<button className={styles.button}>stay in the loop</button>
-			</Link>
+			<Button link='/services' text='see services' />
+			<Button link='/media' text='stay in the loop' />
 		</>
 	);
 }

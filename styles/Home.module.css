@@ -1,5 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 
+.hidden {
+	position: absolute;
+	left: -10000px;
+}
+
+.skip {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	background-color: #222;
+	color: white;
+	padding: 0.5rem;
+	translate: 0 -100%;
+	transition: all 0.3s linear;
+}
+
+.skip:focus {
+	translate: 0;
+}
+
 .container {
 	padding: 0 1em;
 }
@@ -23,22 +45,23 @@
 .container_text {
 	color: #1b1b3a;
 	margin: 1rem auto;
-	padding: 1em 2em;
+	padding: 1em;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 	border-radius: 1rem;
 	font-size: 2rem;
 	text-align: center;
-	max-width: 50rem;
+	max-width: 32rem;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 48rem) {
 	.container_text {
 		font-size: 1.5rem;
 		padding: 0 1em;
+		max-width: 18rem;
 	}
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 48rem) {
 	.nav {
 		flex-direction: column;
 		font-size: 1.5rem;
@@ -47,43 +70,56 @@
 		flex-direction: column;
 		gap: 1rem;
 	}
-	.nav a {
+	.nav li a {
 		font-size: 1.5rem;
 	}
 }
+
 .nav {
 	padding: 1em;
 	display: flex;
-	align-items: center;
+	align-items: stretch;
 	justify-content: space-between;
+	gap: 2rem;
 	font-size: 2rem;
 	letter-spacing: 0.25rem;
 	background-color: #1b1b3a;
 }
 .nav h3 {
+	font-family: "Permanent Marker";
 	color: #e5edf4;
+	transition: all 0.3s linear;
+}
+.nav h3:hover,
+.nav h3:focus,
+.nav h3:active {
+	color: #228b22;
 }
 .nav ul {
+	padding: 0;
+	margin: 0;
 	list-style: none;
 	display: flex;
-	gap: 2rem;
+	gap: 1rem;
 	text-align: center;
 	align-items: center;
 }
-.nav li {
-	width: 100%;
+.nav li a {
+	height: 100%;
 	transition: all 0.3s linear;
-}
-.nav a {
-	text-decoration: none;
 	font-size: 2rem;
-	color: #e5edf4;
+	display: flex;
+	align-items: center;
+	padding: 0.25rem;
 }
 
-.nav li:hover,
-.nav li:focus,
-.nav li:active {
-	background-color: #63a2ec;
+.nav li a.active {
+	background-color: #226d22;
+}
+
+.nav li a:hover,
+.nav li a:focus {
+	background-color: #228b22;
 }
 
 .main {
@@ -140,11 +176,17 @@
 	margin: 0;
 	line-height: 1.15;
 	font-size: 4rem;
+	font-family: "Permanent Marker";
 	text-align: center;
 }
 
 .logo {
-	font-family: "Permanent Marker";
+}
+
+.logo:hover,
+.logo:focus,
+.logo:active {
+	color: #228b22;
 }
 
 .description a {
@@ -159,8 +201,8 @@
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
-	max-width: 90rem;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	max-width: 57rem;
+	/* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
 }
 
 .card {
@@ -202,12 +244,12 @@
 } */
 
 .button {
-	background-color: #7434c3;
+	background-color: #333a60;
 	color: #fff;
 	padding: 0.5rem 0.75rem;
 	margin: 0.5rem;
 	font-size: 1rem;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	border: 2px solid black;
 	border-radius: 1rem;
 	cursor: pointer;
@@ -217,12 +259,12 @@
 .button:hover,
 .button:focus,
 .button:active {
-	border-color: #63a2ec;
-	background-color: #9556f4;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	border-color: #228b22;
+	background-color: #513e9b;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 60rem) {
 	.grid {
 		width: 100%;
 		flex-direction: column;
@@ -234,11 +276,6 @@
 	.footer {
 		border-color: #222;
 	}
-}
-
-.hidden {
-	position: absolute;
-	left: -10000px;
 }
 
 .form {
@@ -271,5 +308,41 @@
 	padding: 0;
 	margin: 0;
 	color: #b9cfe6;
+}
+
+.arrowBtn {
+	min-width: 130px;
+	height: 40px;
+	color: #fff;
+	padding: 5px 10px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	position: relative;
+	display: inline-block;
+	outline: none;
+	overflow: hidden;
+	border-radius: 5px;
+	border: none;
+	background-color: #3d348b;
+}
+.arrowBtn:hover {
+	border-radius: 5px;
+	padding-right: 24px;
+	padding-left: 8px;
+}
+.arrowBtn:hover:after {
+	opacity: 1;
+	right: 10px;
+}
+.arrowBtn:after {
+	content: "\00BB";
+	position: absolute;
+	opacity: 0;
+	font-size: 20px;
+	line-height: 40px;
+	top: 0;
+	right: -20px;
+	transition: 0.4s;
 }
 

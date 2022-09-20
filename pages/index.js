@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Button from "../components/Button";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -10,16 +11,10 @@ export default function Home() {
 				{/* <Image className={styles.img} alt='' src={profileImg} height={400} width={350} /> */}
 			</div>
 
-			<div className={styles.container}>
-				<Link href='/services'>
-					<button className={styles.button}>see our services</button>
-				</Link>
-				<Link href='/contact'>
-					<button className={styles.button}>get in contact</button>
-				</Link>
-				<Link href='/media'>
-					<button className={styles.button}>stay in the loop</button>
-				</Link>
+			<div id='main-content' className={styles.container}>
+				<Button link='/services' text='see services' />
+				<Button link='/contact' text='contact us' />
+				<Button link='/media' text='stay in the loop' />
 			</div>
 
 			{/* <div className={styles.section}>

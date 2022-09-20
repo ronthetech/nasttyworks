@@ -1,15 +1,15 @@
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
+import Button from "../components/Button";
 
 export default function Services() {
 	return (
 		<>
-			<h1 className={styles.title + " " + styles.logo} aria-label='Nastty Works Services'>
-				<Link href='/'>Nastty Works</Link> Services
+			<h1 className={styles.title} aria-label='Nastty Works Services'>
+				<span className={styles.logo}>Nastty Works</span> Services
 			</h1>
-
-			<div className={styles.grid}>
+			<div id='main-content' className={styles.grid}>
 				{/* <div className={styles.card}>
 					<a href='' target='_blank' rel='noopener noreferrer'>
 						<h2></h2>
@@ -78,16 +78,12 @@ export default function Services() {
 			</div>
 			<div className={styles.container_text}>
 				<p className={styles.description}>
-					These are some of the services we provide. Head to the <Link href='/contact'>Contact Page</Link> and send us a message, or give us a call if you have a
-					problem that isn&apos;t listed above!
+					These are just <span style={{ color: "yellowgreen" }}>some</span> of the services we provide. Head to the <Link href='/contact'>Contact Page</Link> and
+					send us a message, or give us a call if you have a problem that isn&apos;t listed above!
 				</p>
 			</div>
-			<Link href='/contact'>
-				<button className={styles.button}>get in contact</button>
-			</Link>
-			<Link href='/media'>
-				<button className={styles.button}>stay in the loop</button>
-			</Link>
+			<Button link='/contact' text='contact us' />
+			<Button link='/media' text='stay in the loop' />
 		</>
 	);
 }
