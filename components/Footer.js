@@ -10,8 +10,8 @@ export default function Footer() {
 			<footer className={styles.footer}>
 				<ul>
 					<li>
-						<a href='https://github.com/ronthetech' target='_blank' rel='noopener noreferrer'>
-							<Image alt='NasttyWorks Instagram' src={instagramLogo} />
+						<a href='https://www.instagram.com/nasttyworks_/' target='_blank' rel='noopener noreferrer'>
+							<Image alt='NasttyWorks Instagram' src={instagramLogo} height={100} width={100} />
 						</a>
 					</li>
 				</ul>

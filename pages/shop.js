@@ -40,6 +40,9 @@ export default function Shop() {
 			<Link href='/services'>
 				<button className={styles.button}>see my projects</button>
 			</Link>
+			<Link href='/media'>
+				<button className={styles.button}>stay in the loop</button>
+			</Link>
 		</>
 	);
 }

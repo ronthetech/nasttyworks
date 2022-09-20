@@ -5,25 +5,33 @@ import styles from "../styles/Home.module.css";
 export default function Media() {
 	return (
 		<>
-			<h1>More About Me</h1>
+			<h1 className={styles.title + " " + styles.logo} aria-label='Nastty Works Media'>
+				<Link href='/'>Nastty Works</Link> Media
+			</h1>
+			<div className={styles.container_text}>
+				<p>
+					When we&apos;re not under the hood or jacking up a car, heres where you can find us!
+					<span style={{ color: "yellowgreen" }}> Stay in the Loop</span>
+				</p>
+			</div>
 			<div className={styles.grid}>
 				<div className={styles.card}>
-					<a href='' target='_blank' rel='noopener noreferrer'>
-						<h2></h2>
-					</a>
 					<p>
-						<span style={{ color: "gold" }}> Gold</span>
+						When we&apos;re not under the hood or jacking up a car, heres where you can find us!
+						<span style={{ color: "yellowgreen" }}> Stay in the Loop</span>
 					</p>
 				</div>
 
 				<div className={styles.card}>
-					<a href='' target='_blank' rel='noopener noreferrer'>
-						<h2></h2>
-						{/* <Image src={pokedexApp} alt='' /> */}
-					</a>
-					<p></p>
+					<h2>
+						Follow us on{" "}
+						<a href='https://www.instagram.com/nasttyworks_/' target='_blank' rel='noopener noreferrer'>
+							<span style={{ color: "yellowgreen" }}> Instagram</span>
+						</a>
+					</h2>
 				</div>
 
+				<div className={styles.card}></div>
 				{/* <a href='' className={styles.card} target='_blank' rel='noopener noreferrer'>
 					<h2></h2>
 					<p></p>
@@ -38,7 +46,7 @@ export default function Media() {
 				<button className={styles.button}>get in contact</button>
 			</Link>
 			<Link href='/services'>
-				<button className={styles.button}>see my projects</button>
+				<button className={styles.button}>see our services</button>
 			</Link>
 		</>
 	);

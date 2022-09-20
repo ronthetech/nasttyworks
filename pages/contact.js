@@ -4,9 +4,9 @@ import styles from "../styles/Home.module.css";
 export default function Contact() {
 	return (
 		<>
-			<h1>Send Me A Message</h1>
+			<h1>Send Us A Message</h1>
 			<h1 className={styles.hidden} aria-label='Nastty Works Contact Form'>
-				Contact <Link href='/'>Nastty Works!</Link>
+				<Link href='/'>Nastty Works</Link> Contact Form
 			</h1>
 			<form className={styles.form}>
 				<label htmlFor='name' aria-label='name'>
@@ -27,16 +27,21 @@ export default function Contact() {
 				<label htmlFor='message' aria-label='message'>
 					Message To Describe Service You Need
 				</label>
-				<input type='text' rows={4} cols={5} name='message' id='message' aria-labelledby='message' required />
+				<input type='text' name='message' id='message' aria-labelledby='message' required />
 
 				<button className={styles.button}>Submit</button>
 			</form>
-			<p className={styles.description}>
-				Send us an email <a href='mailto:nasttyworks@gmail.com/'>directly here!</a>
-			</p>
+			<div className={styles.container_text}>
+				<p className={styles.description}>
+					Send us an <a href='mailto:nasttyworks@gmail.com/'>email directly here!</a>
+				</p>
+			</div>
 
 			<Link href='/services'>
-				<button className={styles.button}>see my projects</button>
+				<button className={styles.button}>see our services</button>
+			</Link>
+			<Link href='/media'>
+				<button className={styles.button}>stay in the loop</button>
 			</Link>
 		</>
 	);

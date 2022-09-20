@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
 .container {
 	padding: 0 1em;
 }
@@ -19,7 +21,7 @@
 }
 
 .container_text {
-	color: #b9cfe6;
+	color: #1b1b3a;
 	margin: 1rem auto;
 	padding: 1em 2em;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -50,11 +52,16 @@
 	}
 }
 .nav {
+	padding: 1em;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	font-size: 2rem;
 	letter-spacing: 0.25rem;
+	background-color: #1b1b3a;
+}
+.nav h3 {
+	color: #e5edf4;
 }
 .nav ul {
 	list-style: none;
@@ -63,10 +70,14 @@
 	text-align: center;
 	align-items: center;
 }
+.nav li {
+	width: 100%;
+	transition: all 0.3s linear;
+}
 .nav a {
 	text-decoration: none;
 	font-size: 2rem;
-	color: #f7f7f7;
+	color: #e5edf4;
 }
 
 .nav li:hover,
@@ -89,9 +100,10 @@
 	display: flex;
 	flex: 1;
 	padding: 2rem 0;
-	border-top: 1px solid #eaeaea;
+	border-top: 1px solid #1b1b3a;
 	justify-content: center;
 	align-items: center;
+	background-color: #1b1b3a;
 }
 .footer ul {
 	list-style: none;
@@ -108,15 +120,20 @@
   flex-grow: 1;
 } */
 
-.title a {
-	color: #0070f3;
+.title a,
+.title Link {
+	color: #9acd32;
+	text-decoration: none;
+}
+
+.title h1 {
 	text-decoration: none;
 }
 
 .title a:hover,
 .title a:focus,
 .title a:active {
-	text-decoration: underline;
+	color: #228b22;
 }
 
 .title {
@@ -126,7 +143,16 @@
 	text-align: center;
 }
 
+.logo {
+	font-family: "Permanent Marker";
+}
+
+.description a {
+	color: #9acd32;
+}
+
 .grid {
+	border-radius: 1rem;
 	margin: 2rem auto;
 	padding: 1em 0;
 	display: flex;
@@ -141,10 +167,10 @@
 	margin: 1rem;
 	padding: 1.5rem;
 	text-align: left;
-	color: inherit;
+	color: #e5edf4;
 	background-color: #262548;
 	text-decoration: none;
-	border: 1px solid #eaeaea;
+	border: 2px solid #eaeaea;
 	border-radius: 1rem;
 	transition: color 0.15s ease, border-color 0.15s ease;
 	max-width: 30rem;
@@ -155,13 +181,13 @@
 .card:focus,
 .card:active {
 	color: #63a2ec;
-	border-color: #63a2ec;
-	border: 1px solid #63a2ec;
+	border: 2px solid #228b22;
 }
 
 .card h2 {
 	margin: 0 0 1rem 0;
 	font-size: 1.5rem;
+	color: #e5edf4;
 }
 
 .card p {
@@ -170,10 +196,11 @@
 	line-height: 1.5;
 }
 
-.logo {
+/* .logo {
 	height: 1em;
 	margin-left: 0.5rem;
-}
+} */
+
 .button {
 	background-color: #7434c3;
 	color: #fff;
@@ -194,6 +221,7 @@
 	background-color: #9556f4;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
+
 @media (max-width: 600px) {
 	.grid {
 		width: 100%;
@@ -207,10 +235,12 @@
 		border-color: #222;
 	}
 }
+
 .hidden {
 	position: absolute;
 	left: -10000px;
 }
+
 .form {
 	text-align: left;
 	display: flex;
@@ -236,6 +266,7 @@
 .form input:active {
 	border-color: #63a2ec;
 }
+
 .form label {
 	padding: 0;
 	margin: 0;

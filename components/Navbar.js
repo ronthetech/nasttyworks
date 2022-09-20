@@ -7,7 +7,7 @@ export default function Navbar() {
 		<nav className={styles.nav}>
 			<Link href='/'>
 				<a>
-					<h3>Nastty Works</h3>
+					<h3 className={styles.logo}>Nastty Works</h3>
 				</a>
 			</Link>
 			<ul>
